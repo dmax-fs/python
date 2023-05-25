@@ -25,6 +25,7 @@ for val in data:
     for val in data:
         if val > biggest:
             biggest = val
+            
 #same as above but index based
     big_index = 0
     for j in range(len(data)):
@@ -71,3 +72,26 @@ for val in data:
         
 
     
+#Simultaneous Assignments
+x,y,z = 6,2,5           #We can explicitly assign a series of values to a series of identifiers
+                        #Right-hand side if evluated before any assignments made to left-hand side variables
+
+
+#Using a generator for a Fibonacci series
+def fibonacci():
+    a=0
+    b=1
+    while True:             #keep going
+        yield a             #report value, a, during this pass
+        future = a + b
+        a = b               #this will be next value reported
+        b = future          #and subsequently this
+        
+#Same generator using simultanious assignments
+def fibonacci():
+    a,b = 0,1
+    while True:
+        yield a
+        a,b = b, a
+        
+        
