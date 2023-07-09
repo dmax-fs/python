@@ -12,14 +12,14 @@ randomer_number = random.choice(random_list)
 print(randomer_number)
 #This will generate a list of random numbers, in the range 1-100, then choose one randomly
 #----------------------------------------------------------------
-import seaborn # says not accessed but it does work
-from matplotlib import pyplot as plt # no such library exists on local machine
-import random
-# Add your code below:
-numbers_a = range(1,13)
-numbers_b = random.sample(range(1000),12)
-plt.plot(numbers_a, numbers_b)
-plt.show()
+# import seaborn # says not accessed but it does work
+# from matplotlib import pyplot as plt # no such library exists on local machine
+# import random
+# # Add your code below:
+# numbers_a = range(1,13)
+# numbers_b = random.sample(range(1000),12)
+# plt.plot(numbers_a, numbers_b)
+# plt.show()
 #firstly aliasing has been used to change the pyplot to plt, which makes it shorter to call
 #numbers_b selects 12 random numbers from the range 1-1000.
 #The plt.plot takes two variables as arguments and plt.show() displays these as a table
@@ -36,9 +36,16 @@ print(four_decimal_points)
 #the Decimal library will make calculations with float numbers and rounding easier
 #----------------------------------------------------------------
 # Import library below:
-from library import always_three    #library is a seperate file (library.py) that contains a function
-                                    #called always_three
-# Call your function below:
-print(always_three())
-#
+# from library import always_three    #library is a seperate file (library.py) that contains a function
+#                                     #called always_three
+# # Call your function below:
+# print(always_three())
+#described as above
 #----------------------------------------------------------------
+#DATETIME
+#datetime video, use python docs for more info
+import datetime
+parse_date = datetime.strptime('Jan 04, 2011', '%m %d, %Y')
+#converts a datetime from a string to a datetime object
+date_string = datetime.strftime(datetime.now(), '%b %d, %Y')
+#converts a datetime to a string object
